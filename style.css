@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1440px;
+    height: auto;
+    display: flex;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main-wrapper {
+    width: 1440px;
+    position: relative;
+}
+
+.kar {
+    width: 1023px;
+    height: auto;
+    margin-top: -10px;
+    margin-left: 505px;
+}
+
+.text1, .text2, .text3 {
+    width: auto;
+    height: auto;
+    position: absolute;
+    font-family: 'Tektur', sans-serif;
+    color: #0F0000;
+    font-size: 35px;
+    padding: 10px 20px;
+    margin-top: -115px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    z-index: 1;
+    border-radius: 8px;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Позиционирование text1 (Услуги) */
+.text1 {
+    left: 656px;
+    transform: translate(-50%, -50%);
+}
+
+/* Позиционирование text2 (Портфолио) */
+.text2 {
+    left: 960px;
+    transform: translate(-50%, -50%);
+}
+
+/* Позиционирование text3 (Контакты) */
+.text3 {
+    left: 1290px;
+    transform: translate(-50%, -50%);
+}
+
+/* 3D-эффект при наведении для всех кнопок */
+.text1:hover, .text2:hover, .text3:hover {
+    color: #52FF58;
+    background: #FFA600E5;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%) translateY(-5px) perspective(500px) rotateX(10deg);
+    border: 2px solid #ffffff;
+}
+
+/* Псевдоэлементы для всех кнопок */
+.text1::before, .text2::before, .text3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 6px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateZ(-10px);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+.text1:hover::before, .text2:hover::before, .text3:hover::before {
+    opacity: 1;
+    transform: translateZ(-5px);
+}
+.container1 {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.kar2 {
+    position: absolute;
+    width: 586px;
+    height: auto;
+    top: 40px;
+    left: -9px;
+}
+
+.foto {
+    width: 720px;
+    height: auto;
+    position: absolute;
+    top: 22px;
+    left: -5px;
+    z-index: 10;
+}
+
+.panel {
+    position: absolute;
+    width: 77px;
+    height: auto;
+    flex-shrink: 0;
+    top: 50px;
+    left: 629px;
+}
+
+.text4 {
+    position: absolute;
+    font-family: 'Stalinist One', sans-serif;
+    color: #0F0000;
+    font-size: 48px;
+    transform: translateX(-50%);
+    top: 50px;
+    left: 1130px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.baby {
+    width: 60px;
+    position: absolute;
+    height: 60px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    top: 155px;
+    left: 756px;
+}
+
+.text5 {
+    position: absolute;
+    font-family: 'Tektur', sans-serif;
+    color: #0F0000;
+    font-size: 20px;
+    transform: translateX(-50%);
+    top: 145px;
+    left: 1140px;
+    width: 40%;
+    box-sizing: border-box;
+    align-content: justify;
+}
+
+.education {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    top: 310px;
+    left: 756px;
+    position: absolute;
+}
+
+.text6 {
+    position: absolute;
+    font-family: 'Tektur', sans-serif;
+    color: #0F0000;
+    font-size: 20px;
+    transform: translateX(-50%);
+    top: 293px;
+    left: 1140px;
+    width: 40%;
+    box-sizing: border-box;
+    align-content: justify;
+}
+
+.text7 {
+    position: absolute;
+    font-family: 'Stalinist One', sans-serif;
+    color: #0F0000;
+    font-size: 48px;
+    transform: translateX(-50%);
+    top: 597px;
+    left: 1130px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.text8 {
+    position: absolute;
+    font-family: 'Stalinist One', sans-serif;
+    color: #FFA600E5;
+    font-size: 24px;
+    transform: translateX(-50%);
+    top: 689px;
+    left: 980px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.telegram{
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    top: 676px;
+    left: 800px;
+    position: absolute;   
+}
+
+.text9{
+    position: absolute;
+    font-family: 'Stalinist One', sans-serif;
+    color: #FFA600E5;
+    font-size: 24px;
+    transform: translateX(-50%);
+    top: 789px;
+    left: 1125px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.gmail{
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    top: 776px;
+    left: 800px;
+    position: absolute; 
+}
+
+.text10{
+    position: absolute;
+    font-family: 'Stalinist One', sans-serif;
+    color: #FFA600E5;
+    font-size: 24px;
+    transform: translateX(-50%);
+    top: 889px;
+    left: 980px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.vk{
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    top: 876px;
+    left: 800px;
+    position: absolute; 
+}
+
+.text11{
+    position: absolute;
+    font-family: 'Stalinist One', sans-serif;
+    color: #FFA600E5;
+    font-size: 24px;
+    transform: translateX(-50%);
+    top: 989px;
+    left: 1010px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.diskort{
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    top: 976px;
+    left: 800px;
+    position: absolute; 
+}
+
+.text12{
+    position: absolute;
+    font-family: 'Tektur', sans-serif;
+    color: #0F0000;
+    font-size: 20px;
+    transform: translateX(-50%);
+    top: 1065px;
+    left: 1100px;
+    width: 40%;
+    box-sizing: border-box;
+    align-content: justify;
+}
+
+.v {
+    /* Ваши текущие стили */
+    width: 30px;
+    height: 30px;
+    transform: rotate(-12.909deg);
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    top: 1065px;
+    left: 769px;
+    position: absolute;
+    
+    /* Анимация */
+    animation: rocking 4s ease-in-out infinite;
+    transform-origin: center bottom; /* Точка вращения снизу */
+}
+
+@keyframes rocking {
+    0%, 100% {
+        transform: rotate(15deg);
+        animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+    25% {
+        transform: rotate(-10deg);
+        animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+    50% {
+        transform: rotate(15deg);
+        animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+    75% {
+        transform: rotate(-10deg);
+        animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+}
+
+.text13{
+    position: absolute;
+    font-family: 'Stalinist One', sans-serif;
+    color: #0F0000;
+    font-size: 48px;
+    transform: translateX(-50%); 
+    top: 1187px;
+    left: 1130px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.n{
+    width: 1072px;
+    height: 716px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    top: 1069px;
+    left: 750px;
+    position: absolute;
+}
+
+.text14{
+    position: absolute;
+    font-family: 'Stalinist One', sans-serif;
+    color: #0F0000;
+    font-size: 48px;
+    transform: translateX(-50%);
+    top: 1823px;
+    left: 700px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.foto2{
+    width: 1289px;
+    height: 467px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    top: 1869px;
+    left: 85px;
+    position: absolute;
+}
+
+.text15, .text16 {
+    z-index: 100; /* Добавьте это */
+    position: absolute;
+    font-family: 'Tektur', sans-serif;
+    color: #0F0000;
+    font-size: 40px;
+    transform: translateX(-50%);
+    top: 2345px;
+    width: 40%;
+    box-sizing: border-box;
+    align-content: justify;
+    pointer-events: auto; /* Это гарантирует, что ссылка будет кликабельна */
+}
+
+.text15 {
+    left: 750px;
+}
+
+.text16 {
+    left: 1075px;
+}
+.text15:hover, .text16:hover {
+    color: #FFA600E5;
+    text-decoration: underline;
+}
+.foto3 {
+    width: 1333px;
+    height: 655px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    top: 2165px;
+    left: -50px;
+    position: absolute;
+    z-index: 1; /* Убедитесь, что это значение меньше, чем у ссылок */
+}                                                                                                                                                                                           
+.rt{
+    width: 211px;
+    height: 754px;  
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    top: 921px;
+    left: 74px;
+    position: absolute;  
+}
+
+.text17, .text18, .text19 {
+    width: auto;
+    height: auto;
+    position: absolute;
+    font-family: 'Tektur', sans-serif;
+    color: #0F0000;
+    font-size: 35px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    z-index: 100;
+    border-radius: 8px;
+    background: transparent;
+    box-shadow: none;
+    top: 2735px;
+}
+
+.text17 {
+    left: 372px;
+    transform: translateX(-50%);
+}
+
+.text18 {
+    left: 672px;
+    transform: translateX(-50%);
+}
+
+.text19 {
+    left: 972px;
+    transform: translateX(-50%);
+}
+
+.text17:hover, .text18:hover, .text19:hover {
+    color: #52FF58;
+    background: #FFA600E5;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%) translateY(-5px) perspective(500px) rotateX(10deg);
+    border: 2px solid #ffffff;
+}
+
+.text17::before, .text18::before, .text19::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 6px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateZ(-10px);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+.text17:hover::before, .text18:hover::before, .text19:hover::before {
+    opacity: 1;
+    transform: translateZ(-5px);
+}
+.text20{
+    position: absolute;
+    font-family: 'Tektur', sans-serif;
+    color: #0F0000;
+    font-size: 40px;
+    transform: translateX(-50%);
+    top: 919px;
+    left: 273px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box; 
+}
+
+.text21{
+    position: absolute;
+    font-family: 'Tektur', sans-serif;
+    color: #0F0000;
+    font-size: 40px;
+    transform: translateX(-50%);
+    top: 985px;
+    left: 324px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;    
+}
+
+.text22{
+    position: absolute;
+    font-family: 'Tektur', sans-serif;
+    color: #0F0000;
+    font-size: 40px;
+    transform: translateX(-50%);
+    top: 1070px;
+    left: 400px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;   
+}
+
+.text23{
+    position: absolute;
+    font-family: 'Tektur', sans-serif;
+    color: #0F0000;
+    font-size: 40px;
+    transform: translateX(-50%);
+    top: 1205px;
+    left: 315px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;    
+}
+
+.text24{
+    position: absolute;
+    font-family: 'Tektur', sans-serif;
+    color: #0F0000;
+    font-size: 40px;
+    transform: translateX(-50%);
+    top: 1274px;
+    left: 283px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;   
+}
+
+.text25{
+    position: absolute;
+    font-family: 'Tektur', sans-serif;
+    color: #0F0000;
+    font-size: 40px;
+    transform: translateX(-50%);
+    top: 1342px;
+    left: 449px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;  
+}
+
+.text26{    
+    position: absolute;
+    font-family: 'Stalinist One', sans-serif;
+    color: #0F0000;
+    font-size: 48px;
+    transform: translateX(-50%);
+    top: 819px;
+    left: 283px;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;   
+}
